@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61A91AFB1FC2DF860005FE2F /* apps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61A91AFA1FC2DF850005FE2F /* apps.plist */; };
+		61A91AFE1FC2DFE90005FE2F /* SDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A91AFD1FC2DFE90005FE2F /* SDViewController.m */; };
+		61A91B001FC2DFF80005FE2F /* SD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61A91AFF1FC2DFF80005FE2F /* SD.storyboard */; };
+		61A91B031FC3139A0005FE2F /* SDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A91B021FC3139A0005FE2F /* SDModel.m */; };
+		61A91B061FC31A510005FE2F /* SDDownloadImgOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A91B051FC31A510005FE2F /* SDDownloadImgOperation.m */; };
 		61AE27C91FBE03CD005695E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AE27C81FBE03CD005695E0 /* main.m */; };
 		61AE27CC1FBE03CD005695E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AE27CB1FBE03CD005695E0 /* AppDelegate.m */; };
-		61AE27CF1FBE03CD005695E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AE27CE1FBE03CD005695E0 /* ViewController.m */; };
-		61AE27D21FBE03CD005695E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61AE27D01FBE03CD005695E0 /* Main.storyboard */; };
 		61AE27D41FBE03CD005695E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61AE27D31FBE03CD005695E0 /* Assets.xcassets */; };
 		61AE27D71FBE03CD005695E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61AE27D51FBE03CD005695E0 /* LaunchScreen.storyboard */; };
 		E0A3A526EB594DEE8A59801C /* libPods-模拟SD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83610EE643F945D9C3AD2DDC /* libPods-模拟SD.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		61A91AFA1FC2DF850005FE2F /* apps.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = apps.plist; sourceTree = "<group>"; };
+		61A91AFC1FC2DFE90005FE2F /* SDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDViewController.h; sourceTree = "<group>"; };
+		61A91AFD1FC2DFE90005FE2F /* SDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDViewController.m; sourceTree = "<group>"; };
+		61A91AFF1FC2DFF80005FE2F /* SD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SD.storyboard; sourceTree = "<group>"; };
+		61A91B011FC3139A0005FE2F /* SDModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDModel.h; sourceTree = "<group>"; };
+		61A91B021FC3139A0005FE2F /* SDModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDModel.m; sourceTree = "<group>"; };
+		61A91B041FC31A510005FE2F /* SDDownloadImgOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDownloadImgOperation.h; sourceTree = "<group>"; };
+		61A91B051FC31A510005FE2F /* SDDownloadImgOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDownloadImgOperation.m; sourceTree = "<group>"; };
 		61AE27C41FBE03CD005695E0 /* 模拟SD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "模拟SD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AE27C81FBE03CD005695E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		61AE27CA1FBE03CD005695E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		61AE27CB1FBE03CD005695E0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		61AE27CD1FBE03CD005695E0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		61AE27CE1FBE03CD005695E0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		61AE27D11FBE03CD005695E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		61AE27D31FBE03CD005695E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61AE27D61FBE03CD005695E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61AE27D81FBE03CD005695E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,6 +52,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61A91AF81FBE09EC0005FE2F /* SD */ = {
+			isa = PBXGroup;
+			children = (
+				61A91AFC1FC2DFE90005FE2F /* SDViewController.h */,
+				61A91AFD1FC2DFE90005FE2F /* SDViewController.m */,
+				61A91AFF1FC2DFF80005FE2F /* SD.storyboard */,
+				61A91B011FC3139A0005FE2F /* SDModel.h */,
+				61A91B021FC3139A0005FE2F /* SDModel.m */,
+			);
+			path = SD;
+			sourceTree = "<group>";
+		};
+		61A91AF91FBE09EC0005FE2F /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				61A91B041FC31A510005FE2F /* SDDownloadImgOperation.h */,
+				61A91B051FC31A510005FE2F /* SDDownloadImgOperation.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		61AE27BB1FBE03CD005695E0 = {
 			isa = PBXGroup;
 			children = (
@@ -65,14 +94,14 @@
 		61AE27C61FBE03CD005695E0 /* 模拟SD */ = {
 			isa = PBXGroup;
 			children = (
+				61A91AF81FBE09EC0005FE2F /* SD */,
+				61A91AF91FBE09EC0005FE2F /* Tools */,
 				61AE27CA1FBE03CD005695E0 /* AppDelegate.h */,
 				61AE27CB1FBE03CD005695E0 /* AppDelegate.m */,
-				61AE27CD1FBE03CD005695E0 /* ViewController.h */,
-				61AE27CE1FBE03CD005695E0 /* ViewController.m */,
-				61AE27D01FBE03CD005695E0 /* Main.storyboard */,
 				61AE27D31FBE03CD005695E0 /* Assets.xcassets */,
 				61AE27D51FBE03CD005695E0 /* LaunchScreen.storyboard */,
 				61AE27D81FBE03CD005695E0 /* Info.plist */,
+				61A91AFA1FC2DF850005FE2F /* apps.plist */,
 				61AE27C71FBE03CD005695E0 /* Supporting Files */,
 			);
 			path = "模拟SD";
@@ -166,8 +195,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				61AE27D71FBE03CD005695E0 /* LaunchScreen.storyboard in Resources */,
+				61A91AFB1FC2DF860005FE2F /* apps.plist in Resources */,
 				61AE27D41FBE03CD005695E0 /* Assets.xcassets in Resources */,
-				61AE27D21FBE03CD005695E0 /* Main.storyboard in Resources */,
+				61A91B001FC2DFF80005FE2F /* SD.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,8 +259,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61AE27CF1FBE03CD005695E0 /* ViewController.m in Sources */,
+				61A91B031FC3139A0005FE2F /* SDModel.m in Sources */,
 				61AE27CC1FBE03CD005695E0 /* AppDelegate.m in Sources */,
+				61A91AFE1FC2DFE90005FE2F /* SDViewController.m in Sources */,
+				61A91B061FC31A510005FE2F /* SDDownloadImgOperation.m in Sources */,
 				61AE27C91FBE03CD005695E0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,14 +270,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		61AE27D01FBE03CD005695E0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				61AE27D11FBE03CD005695E0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		61AE27D51FBE03CD005695E0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -392,6 +416,7 @@
 				61AE27DD1FBE03CD005695E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

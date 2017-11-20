@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  SDViewController.h
 //  模拟SD
 //
-//  Created by 曹魏 on 2017/11/17.
+//  Created by 曹魏 on 2017/11/20.
 //  Copyright © 2017年 itcast. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface SDViewController : UIViewController
 
 @end
-
