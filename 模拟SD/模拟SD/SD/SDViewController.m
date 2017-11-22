@@ -9,13 +9,13 @@
 #import "SDViewController.h"
 #import "SDModel.h"
 #import "SDDownloadImgOperation.h"
+#import "SDDownloadManager.h"
 @interface SDViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 @property (nonatomic,strong)NSArray *dataArray;
-@property (nonatomic,strong)NSOperationQueue *queue;
+
 @property (nonatomic,copy)NSString *currentURL;
-//定义一个操作缓存
-@property (nonatomic,strong)NSMutableDictionary *operationCache;
+
 
 @end
 
@@ -27,19 +27,7 @@
     }
     return _dataArray;
 }
-//一般是懒加载队列
-- (NSOperationQueue *)queue{
-    if (_queue == nil) {
-        _queue = [[NSOperationQueue alloc]init];
-    }
-    return _queue;
-}
-- (NSMutableDictionary *)operationCache{
-    if (_operationCache == nil) {
-        _operationCache = [NSMutableDictionary dictionary];
-    }
-    return _operationCache;
-}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -55,24 +43,17 @@
     //取出模型数据
     SDModel *model = self.dataArray[number];
     if (![self.currentURL isEqualToString:model.icon]) {
-        //取出上一次操作
-        SDDownloadImgOperation *lastOperation = self.operationCache[self.currentURL];
-        //取消上一次操作,cancel不能真正的取消操作,只能作为一个判断条件,所以需要手动取消
-        [lastOperation cancel];
+        [[SDDownloadManager sharedManager]cancelOperationWithStr:self.currentURL];
     }
     
     self.currentURL = model.icon;
     
     //下载图片操作
-    SDDownloadImgOperation *downloadOperation = [SDDownloadImgOperation downloadWithImageUrl:model.icon finish:^(UIImage *image) {
+    [[SDDownloadManager sharedManager]downloadWithIMGUrl:model.icon finish:^(UIImage *image) {
+        
+        //赋值操作
         self.iconImage.image = image;
-        //删除操作
-        [self.operationCache removeObjectForKey:model.icon];
     }];
-    //把操作加入到队列继而能执行main方法
-    [self.queue addOperation:downloadOperation];
-    //把操作加入到操作缓存中
-    [self.operationCache setObject:downloadOperation forKey:model.icon];
 }
 @end
 

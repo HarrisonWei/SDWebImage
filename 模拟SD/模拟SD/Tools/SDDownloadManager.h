@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 @interface SDDownloadManager : NSObject
-
++ (instancetype)sharedManager;
+//我需要一个类方法进行数据传递
+- (void)downloadWithIMGUrl:(NSString *)urlString finish:(void(^)(UIImage *))finishBlock;
+//取消操作封装
+- (void)cancelOperationWithStr:(NSString *)url;
 @end
