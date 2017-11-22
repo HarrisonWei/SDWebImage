@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 @interface SDDownloadImgOperation : NSOperation
+//图片下载地址
+@property (nonatomic,copy)NSString *imgURL;
+//定义block属性
+@property (nonatomic,copy)void(^finishBlock)(UIImage *image);
 
+//我需要一个类方法进行数据传递
++ (instancetype)downloadWithImageUrl:(NSString *)urlString finish:(void(^)(UIImage *))finishBlock;
 @end
