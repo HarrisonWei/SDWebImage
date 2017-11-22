@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6161F5101FC587F300B2943F /* SDDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6161F50F1FC587F300B2943F /* SDDownloadManager.m */; };
+		6161F5131FC59E1300B2943F /* NSString+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 6161F5121FC59E1300B2943F /* NSString+Path.m */; };
+		6161F5161FC5AEBF00B2943F /* SDWebImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6161F5151FC5AEBF00B2943F /* SDWebImageView.m */; };
 		61A91AFB1FC2DF860005FE2F /* apps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61A91AFA1FC2DF850005FE2F /* apps.plist */; };
 		61A91AFE1FC2DFE90005FE2F /* SDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A91AFD1FC2DFE90005FE2F /* SDViewController.m */; };
 		61A91B001FC2DFF80005FE2F /* SD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61A91AFF1FC2DFF80005FE2F /* SD.storyboard */; };
@@ -23,6 +25,10 @@
 /* Begin PBXFileReference section */
 		6161F50E1FC587F300B2943F /* SDDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDownloadManager.h; sourceTree = "<group>"; };
 		6161F50F1FC587F300B2943F /* SDDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDownloadManager.m; sourceTree = "<group>"; };
+		6161F5111FC59E1300B2943F /* NSString+Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Path.h"; sourceTree = "<group>"; };
+		6161F5121FC59E1300B2943F /* NSString+Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Path.m"; sourceTree = "<group>"; };
+		6161F5141FC5AEBF00B2943F /* SDWebImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageView.h; sourceTree = "<group>"; };
+		6161F5151FC5AEBF00B2943F /* SDWebImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageView.m; sourceTree = "<group>"; };
 		61A91AFA1FC2DF850005FE2F /* apps.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = apps.plist; sourceTree = "<group>"; };
 		61A91AFC1FC2DFE90005FE2F /* SDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDViewController.h; sourceTree = "<group>"; };
 		61A91AFD1FC2DFE90005FE2F /* SDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDViewController.m; sourceTree = "<group>"; };
@@ -70,10 +76,14 @@
 		61A91AF91FBE09EC0005FE2F /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				6161F5111FC59E1300B2943F /* NSString+Path.h */,
+				6161F5121FC59E1300B2943F /* NSString+Path.m */,
 				61A91B041FC31A510005FE2F /* SDDownloadImgOperation.h */,
 				61A91B051FC31A510005FE2F /* SDDownloadImgOperation.m */,
 				6161F50E1FC587F300B2943F /* SDDownloadManager.h */,
 				6161F50F1FC587F300B2943F /* SDDownloadManager.m */,
+				6161F5141FC5AEBF00B2943F /* SDWebImageView.h */,
+				6161F5151FC5AEBF00B2943F /* SDWebImageView.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -268,7 +278,9 @@
 				61AE27CC1FBE03CD005695E0 /* AppDelegate.m in Sources */,
 				6161F5101FC587F300B2943F /* SDDownloadManager.m in Sources */,
 				61A91AFE1FC2DFE90005FE2F /* SDViewController.m in Sources */,
+				6161F5131FC59E1300B2943F /* NSString+Path.m in Sources */,
 				61A91B061FC31A510005FE2F /* SDDownloadImgOperation.m in Sources */,
+				6161F5161FC5AEBF00B2943F /* SDWebImageView.m in Sources */,
 				61AE27C91FBE03CD005695E0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

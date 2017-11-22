@@ -8,11 +8,13 @@
 
 #import "SDDownloadManager.h"
 #import "SDDownloadImgOperation.h"
-
+#import "NSString+Path.h"
 @interface SDDownloadManager()
 @property (nonatomic,strong)NSOperationQueue *queue;
 //定义一个操作缓存
 @property (nonatomic,strong)NSMutableDictionary *operationCache;
+//定义一个内存缓存
+@property (nonatomic,strong)NSMutableDictionary *imageCache;
 
 @end
 
@@ -39,15 +41,40 @@
     return _operationCache;
 }
 
-
+- (NSMutableDictionary *)imageCache{
+    if (_imageCache == nil) {
+        _imageCache = [NSMutableDictionary dictionary];
+    }
+    return _imageCache;
+}
 
 
 - (void)downloadWithIMGUrl:(NSString *)urlString finish:(void(^)(UIImage *))finishBlock{
     //下载图片操作
     SDDownloadImgOperation *downloadOperation = [SDDownloadImgOperation downloadWithImageUrl:urlString finish:^(UIImage *image) {
-        finishBlock(image);
+        //从内存中取出下载好的图片
+        UIImage *cacheImg = self.imageCache[urlString];
+        //判断
+        if (cacheImg) {
+            finishBlock(cacheImg);
+            return;
+        }else{
+            //沙盒缓存
+            UIImage *sandBoxImg = [UIImage imageWithContentsOfFile:[urlString appendCachePath]];
+            if (sandBoxImg) {
+                finishBlock(sandBoxImg);
+                //优化 写到内存缓存中
+                [self.imageCache setObject:sandBoxImg forKey:urlString];
+                
+                return;
+            }
+        }
+        
+        
         //删除操作
         [self.operationCache removeObjectForKey:urlString];
+        //把下载好的图片缓存到内存中
+        [self.imageCache setObject:image forKey:urlString];
     }];
     //加入到队列
     [self.queue addOperation:downloadOperation];

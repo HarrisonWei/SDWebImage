@@ -8,10 +8,10 @@
 
 #import "SDViewController.h"
 #import "SDModel.h"
-#import "SDDownloadImgOperation.h"
-#import "SDDownloadManager.h"
+
+#import "SDWebImageView.h"
 @interface SDViewController ()
-@property (weak, nonatomic) IBOutlet UIImageView *iconImage;
+@property (weak, nonatomic) IBOutlet SDWebImageView *iconImage;
 @property (nonatomic,strong)NSArray *dataArray;
 
 @property (nonatomic,copy)NSString *currentURL;
@@ -42,18 +42,8 @@
     u_int32_t number = arc4random_uniform((u_int32_t)self.dataArray.count);
     //取出模型数据
     SDModel *model = self.dataArray[number];
-    if (![self.currentURL isEqualToString:model.icon]) {
-        [[SDDownloadManager sharedManager]cancelOperationWithStr:self.currentURL];
-    }
     
-    self.currentURL = model.icon;
-    
-    //下载图片操作
-    [[SDDownloadManager sharedManager]downloadWithIMGUrl:model.icon finish:^(UIImage *image) {
-        
-        //赋值操作
-        self.iconImage.image = image;
-    }];
+    [self.iconImage downloadWithUrlString:model.icon];
 }
 @end
 

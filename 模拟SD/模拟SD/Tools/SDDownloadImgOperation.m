@@ -7,7 +7,7 @@
 //
 
 #import "SDDownloadImgOperation.h"
-
+#import "NSString+Path.h"
 @implementation SDDownloadImgOperation
 + (instancetype)downloadWithImageUrl:(NSString *)urlString finish:(void(^)(UIImage *))finishBlock{
     SDDownloadImgOperation *operation = [[SDDownloadImgOperation alloc]init];
@@ -21,6 +21,10 @@
     NSURL *url = [NSURL URLWithString:self.imgURL];
     [NSThread sleepForTimeInterval:1];
     NSData *data = [NSData dataWithContentsOfURL:url];
+    //存沙盒
+    [data writeToFile:[self.imgURL appendCachePath] atomically:YES];
+    
+    
     //data是个耗时任务,在这里取消
     if ([self isCancelled]) {
         return;
