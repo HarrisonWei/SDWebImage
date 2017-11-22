@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		614CB2EB1FC5F1D80079FFDB /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 614CB2EA1FC5F1D80079FFDB /* UIImageView+WebCache.m */; };
 		6161F5101FC587F300B2943F /* SDDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6161F50F1FC587F300B2943F /* SDDownloadManager.m */; };
 		6161F5131FC59E1300B2943F /* NSString+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 6161F5121FC59E1300B2943F /* NSString+Path.m */; };
 		6161F5161FC5AEBF00B2943F /* SDWebImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6161F5151FC5AEBF00B2943F /* SDWebImageView.m */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		614CB2E91FC5F1D80079FFDB /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
+		614CB2EA1FC5F1D80079FFDB /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		6161F50E1FC587F300B2943F /* SDDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDownloadManager.h; sourceTree = "<group>"; };
 		6161F50F1FC587F300B2943F /* SDDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDownloadManager.m; sourceTree = "<group>"; };
 		6161F5111FC59E1300B2943F /* NSString+Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Path.h"; sourceTree = "<group>"; };
@@ -84,6 +87,8 @@
 				6161F50F1FC587F300B2943F /* SDDownloadManager.m */,
 				6161F5141FC5AEBF00B2943F /* SDWebImageView.h */,
 				6161F5151FC5AEBF00B2943F /* SDWebImageView.m */,
+				614CB2E91FC5F1D80079FFDB /* UIImageView+WebCache.h */,
+				614CB2EA1FC5F1D80079FFDB /* UIImageView+WebCache.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 				6161F5101FC587F300B2943F /* SDDownloadManager.m in Sources */,
 				61A91AFE1FC2DFE90005FE2F /* SDViewController.m in Sources */,
 				6161F5131FC59E1300B2943F /* NSString+Path.m in Sources */,
+				614CB2EB1FC5F1D80079FFDB /* UIImageView+WebCache.m in Sources */,
 				61A91B061FC31A510005FE2F /* SDDownloadImgOperation.m in Sources */,
 				6161F5161FC5AEBF00B2943F /* SDWebImageView.m in Sources */,
 				61AE27C91FBE03CD005695E0 /* main.m in Sources */,
